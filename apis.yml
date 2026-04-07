@@ -1,7 +1,11 @@
 aid: gap
-url: https://raw.githubusercontent.com/api-evangelist/gap/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/gap/refs/heads/main/apis.yml
 modified: '2026-03-21'
 apis: []
 common:
   - type: Website
     url: https://www.gap.com
+description: >-
+  Discover casual clothing for women, men, kids, and baby at Gap. Stylish, comfy,
+  and modern pieces for the whole family. Enjoy special deals on jeans, tees & more!
