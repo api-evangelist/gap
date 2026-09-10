@@ -1,11 +1,14 @@
 aid: gap
 name: Gap
 description: >-
-  Gap Inc. is a Fortune 500 American clothing and accessories retailer
-  operating brands including Gap, Old Navy, Banana Republic, and Athleta.
-  Gap does not publish a public developer API; this repository tracks the
-  company, its public web presence, and any partner or technical artifacts
-  that surface over time.
+  Gap Inc. is a Fortune 500 American clothing and accessories retailer operating the Gap,
+  Old Navy, Banana Republic and Athleta brands. Gap Inc. publishes no public developer API,
+  no machine-readable contract and no developer portal: probing found an Apigee gateway at
+  api.gap.com that exposes no proxy to an anonymous caller, and a dangling developer-portal
+  CNAME at developer.gap.com (gap-api-docs-portal.apigee.net) whose service is gone and whose
+  TLS certificate does not cover the hostname. What Gap does publish is a HackerOne
+  vulnerability disclosure programme and one first-party open-source Android HTTP library.
+  This repository is an independent third-party profile of that public surface.
 type: Index
 deliveryModel:
   model: unknown
@@ -37,8 +40,10 @@ tags:
   - Retail
   - Apparel
   - E-Commerce
+  - Fashion
+  - Consumer Goods
 created: '2026-03-21'
-modified: '2026-04-28'
+modified: '2026-09-10'
 url: >-
   https://raw.githubusercontent.com/api-evangelist/gap/refs/heads/main/apis.yml
 specificationVersion: '0.23'
@@ -54,6 +59,48 @@ common:
     url: https://www.gap.com
   - type: Corporate
     url: https://www.gapinc.com/
+  - type: Packages
+    url: packages/gap-packages.yml
+  - type: LLMsTxt
+    url: llms/gap-llms.txt
+  - type: Lifecycle
+    url: lifecycle/gap-lifecycle.yml
+  - type: VulnerabilityDisclosure
+    url: security/gap-vulnerability-disclosure.yml
+  - type: Security
+    url: https://hackerone.com/gap
+  - type: TermsOfService
+    url: https://www.gap.com/customer-service/terms-of-use?cid=6754
+  - type: PrivacyPolicy
+    url: https://www.gapinc.com/en-us/consumer-privacy-policy
+  - type: Support
+    url: https://www.gap.com/customer-service/contact-us?cid=81270
+  - type: Blog
+    url: https://www.gapinc.com/en-us/news/technology
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-09-10'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Gap Inc. provisioned an Apigee developer portal at developer.gap.com — the DNS still
+    CNAMEs to gap-api-docs-portal.apigee.net — but the service behind it is gone, its TLS
+    certificate covers only *.apigee.net, and the Apigee runtime at api.gap.com answers every
+    anonymous path with "Unable to identify proxy for host", so there is no public API, spec,
+    portal or SDK to read anywhere on the estate.
+  evidence:
+    - url: https://developer.gap.com/
+      status: 0
+    - url: https://gap-api-docs-portal.apigee.net/
+      status: 404
+    - url: https://api.gap.com/openapi.json
+      status: 404
+    - url: https://www.gap.com/.well-known/api-catalog
+      status: 404
+  checked: '2026-09-10'

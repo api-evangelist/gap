@@ -1,0 +1,274 @@
+generated: '2026-09-10'
+method: probed
+source: live HTTPS probes of every host in apis.yml plus the Apigee API host (api.gap.com), the Apigee
+  developer-portal CNAME (developer.gap.com) and the three sibling brand hosts
+note: 72 probes across 8 hosts and 9 named /.well-known/ paths returned NO document. Gap Inc publishes
+  no security.txt, no OpenID/OAuth discovery, no api-catalog, no ai-plugin.json, no A2A agent card and
+  no AAuth resource on any host it controls. This file records a measured absence — no WellKnown or SecurityTxt
+  pointer is wired in apis.yml, because there is nothing served. Gap DOES run a published vulnerability
+  disclosure programme, but on HackerOne rather than at /.well-known/security.txt — see security/gap-vulnerability-disclosure.yml.
+summary:
+  hosts_probed: 8
+  paths_probed_per_host: 9
+  total_probes: 72
+  documents_found: 0
+hosts:
+- host: www.gap.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+- host: gap.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 301
+    file: null
+    note: redirects to www; the www host was probed directly and returned 404
+  - path: /.well-known/openid-configuration
+    status: 301
+    file: null
+    note: redirects to www; the www host was probed directly and returned 404
+  - path: /.well-known/oauth-authorization-server
+    status: 301
+    file: null
+    note: redirects to www; the www host was probed directly and returned 404
+  - path: /.well-known/oauth-protected-resource
+    status: 301
+    file: null
+    note: redirects to www; the www host was probed directly and returned 404
+  - path: /.well-known/api-catalog
+    status: 301
+    file: null
+    note: redirects to www; the www host was probed directly and returned 404
+  - path: /.well-known/ai-plugin.json
+    status: 301
+    file: null
+    note: redirects to www; the www host was probed directly and returned 404
+  - path: /.well-known/agent-card.json
+    status: 301
+    file: null
+    note: redirects to www; the www host was probed directly and returned 404
+  - path: /.well-known/agent.json
+    status: 301
+    file: null
+    note: redirects to www; the www host was probed directly and returned 404
+  - path: /.well-known/aauth-resource.json
+    status: 301
+    file: null
+    note: redirects to www; the www host was probed directly and returned 404
+- host: www.gapinc.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+- host: api.gap.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+- host: developer.gap.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+    file: null
+    note: connection failed — TLS certificate on developer.gap.com does not cover the hostname and the
+      origin closes the connection
+  - path: /.well-known/openid-configuration
+    status: 0
+    file: null
+    note: connection failed — TLS certificate on developer.gap.com does not cover the hostname and the
+      origin closes the connection
+  - path: /.well-known/oauth-authorization-server
+    status: 0
+    file: null
+    note: connection failed — TLS certificate on developer.gap.com does not cover the hostname and the
+      origin closes the connection
+  - path: /.well-known/oauth-protected-resource
+    status: 0
+    file: null
+    note: connection failed — TLS certificate on developer.gap.com does not cover the hostname and the
+      origin closes the connection
+  - path: /.well-known/api-catalog
+    status: 0
+    file: null
+    note: connection failed — TLS certificate on developer.gap.com does not cover the hostname and the
+      origin closes the connection
+  - path: /.well-known/ai-plugin.json
+    status: 0
+    file: null
+    note: connection failed — TLS certificate on developer.gap.com does not cover the hostname and the
+      origin closes the connection
+  - path: /.well-known/agent-card.json
+    status: 0
+    file: null
+    note: connection failed — TLS certificate on developer.gap.com does not cover the hostname and the
+      origin closes the connection
+  - path: /.well-known/agent.json
+    status: 0
+    file: null
+    note: connection failed — TLS certificate on developer.gap.com does not cover the hostname and the
+      origin closes the connection
+  - path: /.well-known/aauth-resource.json
+    status: 0
+    file: null
+    note: connection failed — TLS certificate on developer.gap.com does not cover the hostname and the
+      origin closes the connection
+- host: oldnavy.gap.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+- host: bananarepublic.gap.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null
+- host: athleta.gap.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+  - path: /.well-known/aauth-resource.json
+    status: 404
+    file: null

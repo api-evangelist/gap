@@ -1,0 +1,61 @@
+generated: '2026-09-10'
+method: searched
+source: >-
+  https://github.com/gapinc (Gap Inc.'s GitHub organisation, verified badge, contact
+  open_source_office@gap.com) plus registry metadata probes against Maven Central
+  (repo1.maven.org), npm, PyPI, RubyGems, crates.io and NuGet.
+note: >-
+  Gap Inc. publishes ONE first-party open-source library and it is NOT an SDK for a Gap API —
+  it is a general-purpose Android HTTP client the company built for its own mobile apps.
+  Because Gap ships no public API, there is no client SDK surface to count here. No `SDKs`
+  pointer is wired in apis.yml on purpose: crediting a generic HTTP library as an API SDK
+  would assert a developer surface Gap does not offer.
+registries_searched:
+  - registry: maven-central
+    query: https://repo1.maven.org/maven2/com/gap/androidlibraries/
+    status: 404
+    result: no Gap Inc. group id published
+  - registry: npm
+    result: no first-party @gap / gapinc scope found
+  - registry: pypi
+    result: none found
+  - registry: rubygems
+    result: none found
+  - registry: crates.io
+    result: none found
+  - registry: nuget
+    result: none found
+package_count: 1
+official_sdk_count: 0
+packages:
+  - name: Hoodies-Network
+    coordinates: com.gap.androidlibraries:hoodies-networkandroid
+    language: Kotlin
+    platform: Android
+    official: true
+    is_api_sdk: false
+    kind: general-purpose HTTP client library
+    registry: none
+    registry_note: >-
+      NOT published to any public package registry. Maven Central has no
+      com.gap.androidlibraries group (repo1.maven.org probe 2026-09-10 → HTTP 404), and the
+      project README instructs consumers to clone the repository and run
+      `publishAarPublicationToMavenLocal` before adding the dependency. A consumer therefore
+      cannot resolve this library from a build file without vendoring it first.
+    version: 1.0.0
+    published: '2023-11-29'
+    version_source: >-
+      GitHub release tag v1.0.0, published_at 2023-11-29T20:35:49Z — the only release and
+      the only tag on the repository (GitHub API, probed 2026-09-10).
+    last_commit: '2024-08-22'
+    repository: https://github.com/gapinc/hoodies-network
+    license: MIT
+    description: >-
+      A modern, type-safe and high-performance Android HTTP library made by Gap Inc.
+      Originally designed to make network calls in Gap's Instant Apps. Kotlin-native,
+      supports GET/POST/PUT/PATCH/DELETE, interceptors, retry, mock web server, encrypted
+      cache and cookie handling.
+    stars: 11
+    decay_signal: >-
+      Sole release is 1.0.0 from 2023-11-29; last commit 2024-08-22. Nearly two years without
+      a release, and no registry distribution, so the practical adoption path is a fork.

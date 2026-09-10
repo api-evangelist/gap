@@ -1,0 +1,62 @@
+generated: '2026-09-10'
+method: probed
+source: >-
+  Live DNS, TLS and HTTP probes of api.gap.com and developer.gap.com on 2026-09-10, plus the
+  Internet Archive CDX index for both hosts.
+note: >-
+  Gap Inc. publishes no API versioning policy, no deprecation policy, no SLA and no status
+  page. What the probes DID find is an API management estate that is provisioned but not
+  published: an Apigee runtime serving Gap's own apps, and a developer portal hostname that
+  no longer resolves to a working service.
+status_page:
+  present: false
+  hosts_probed:
+    - status.gap.com
+    - status.gapinc.com
+    - trust.gap.com
+    - trust.gapinc.com
+  result: all four return NXDOMAIN (dig, 2026-09-10)
+deprecation_policy:
+  present: false
+  note: No Deprecation/Sunset header policy (RFC 8594) or deprecation page is published.
+versioning_policy:
+  present: false
+sla:
+  present: false
+infrastructure:
+  - host: api.gap.com
+    state: live-but-unpublished
+    stack: Apigee (Google Cloud API Management)
+    evidence: >-
+      HTTPS GET https://api.gap.com/ returns HTTP 404 with an Apigee fault body —
+      {"fault":{"faultstring":"Unable to identify proxy for host: secureAzeus and url: \"/\"",
+      "detail":{"errorcode":"messaging.adaptors.http.flow.ApplicationNotFound"}}} — the
+      signature of an Apigee gateway with no proxy mapped for an anonymous root request.
+      Responses also carry Akamai bot-manager cookies (_abck, bm_sz).
+    interpretation: >-
+      Gap Inc. runs a real API gateway, but no proxy is exposed to an unauthenticated caller
+      at any probed path. Internet Archive CDX for api.gap.com holds only Akamai bot-sensor
+      URLs and 404s on every /.well-known/ path — consistent with a gateway that fronts
+      Gap's own web and mobile clients rather than a published developer product.
+  - host: developer.gap.com
+    state: dangling
+    stack: Apigee developer portal
+    evidence: >-
+      DNS CNAME chain developer.gap.com -> gap-api-docs-portal.apigee.net ->
+      agwe1rt001-0-routers.dn.apigee.net -> 35.203.131.10. The TLS handshake presents a
+      certificate for CN=apigee.net / SAN *.apigee.net, which does NOT cover
+      developer.gap.com, so every browser and client fails verification; forcing the
+      connection insecurely still yields curl error 52 (empty reply from server). The
+      Apigee target itself answers HTTP 404 "Unable to identify proxy for host:
+      gap-api-docs-portal.apigee.net".
+    interpretation: >-
+      The hostname is named gap-api-docs-portal — Gap Inc. provisioned an Apigee-hosted API
+      documentation portal at developer.gap.com. The DNS record survives; the service behind
+      it does not. Internet Archive holds no capture of a real Gap developer portal at this
+      host (the 2010-2012 captures are unrelated scraped-content 404s, and the last capture,
+      2018, is a 302). This is an abandoned or never-launched developer surface, not a
+      retired public programme.
+    remedy: >-
+      Either retire the DNS record, or restore the portal behind a certificate that covers
+      developer.gap.com. As it stands the record advertises a developer programme that
+      cannot be reached by any client.
