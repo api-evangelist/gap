@@ -1,7 +1,9 @@
 ---
 title: Gap Inc. Taps Gemini Enterprise to Become 'AI-First' Retailer
 url: https://www.chiefmarketer.com/gap-inc-taps-gemini-enterprise-to-become-ai-first-retailer/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Gap" press release artificial intelligence'
 position: 4
 source: serpapi-google

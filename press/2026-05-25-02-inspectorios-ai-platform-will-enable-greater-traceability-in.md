@@ -1,7 +1,9 @@
 ---
 title: Inspectorio's AI Platform Will Enable Greater Traceability in ...
 url: https://www.businesswire.com/news/home/20260409206762/en/Inspectorios-AI-Platform-Will-Enable-Greater-Traceability-in-Gap-Inc.-Global-Supply-Chain
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Gap" press release artificial intelligence'
 position: 2
 source: serpapi-google

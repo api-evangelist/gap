@@ -1,7 +1,9 @@
 ---
 title: Gap goes all-in on Google AI. Old Navy, Banana Republic ...
 url: https://www.facebook.com/groups/augmented/posts/1338047877377594/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Gap" press release artificial intelligence'
 position: 5
 source: serpapi-google
