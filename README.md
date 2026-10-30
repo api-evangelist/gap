@@ -1,4 +1,4 @@
-# Gap (gap)
+# Gap
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,36 +64,86 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Gap Inc. is a Fortune 500 American clothing and accessories retailer operating brands including Gap, Old Navy, Banana Republic, and Athleta. Gap does not publish a public developer API; this repository tracks the company, its public web presence, and any partner or technical artifacts that surface over time.
+Gap Inc. is a Fortune 500 American clothing and accessories retailer operating the Gap, Old Navy, Banana Republic and Athleta brands. Gap Inc. publishes no public developer API, no machine-readable contract and no developer portal: probing found an Apigee gateway at api.gap.com that exposes no proxy to an anonymous caller, and a dangling developer-portal CNAME at developer.gap.com (gap-api-docs-portal.apigee.net) whose service is gone and whose TLS certificate does not cover the hostname. What Gap does publish is a HackerOne vulnerability disclosure programme and one first-party open-source Android HTTP library. This repository is an independent third-party profile of that public surface.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/gap/refs/heads/main/apis.yml)
+**Areas:** Fortune 500 · Retail · Apparel · E-Commerce · Fashion · Consumer Goods
 
-## Scope
+## Gap on APIs.io
 
-- **Type:** Index
-- **Position:** Consuming
-- **Access:** 3rd-Party
+Everything profiled for Gap is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/gap/](https://apis.io/providers/gap/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### Published properties
 
-- Fortune 500, Retail, Apparel, E-Commerce
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Timestamps
+#### Security (2)
 
-- **Created:** 2026-03-21
-- **Modified:** 2026-04-28
+Authentication, trust centre, and vulnerability disclosure.
 
-## APIs
+- [Gap Domain Security](https://apis.io/security/gap/gap-domain-security/)
+- [Gap Vulnerability Disclosure](https://apis.io/security/gap/gap-vulnerability-disclosure/)
 
-No public APIs have been documented yet. Contributions welcome.
+## Where to find this API
 
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.gap.com)
-- [Corporate](https://www.gapinc.com/)
+- [Support](https://www.gap.com/customer-service/contact-us?cid=81270)
+- [Blog](https://www.gapinc.com/en-us/news/technology)
+- [Security](https://hackerone.com/gap)
+- [Terms of service](https://www.gap.com/customer-service/terms-of-use?cid=6754)
+- [Privacy policy](https://www.gapinc.com/en-us/consumer-privacy-policy)
+- [GitHub](https://github.com/gapinc)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
+**Kin Score 13.6** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-**Email:** kin@apievangelist.com
+| Facet | Score |
+|---|---|
+| Discoverability | 55.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 13.2 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 21.1 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 19.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/gap/](https://apis.io/providers/gap/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Gap: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/gap/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
